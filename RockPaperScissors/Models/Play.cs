@@ -23,29 +23,17 @@ namespace RockPaperScissors.Models
       {
         return "draw";
       }
-      else if (currentPlay.PlayerOneInput == "rock" && currentPlay.PlayerTwoInput == "scissors")
+      else if ((currentPlay.PlayerOneInput == "rock" && currentPlay.PlayerTwoInput == "scissors")
+        || (currentPlay.PlayerOneInput == "paper" && currentPlay.PlayerTwoInput == "rock")
+        || (currentPlay.PlayerOneInput == "scissors" && currentPlay.PlayerTwoInput == "paper"))
       {
-        return "Player One wins with rock!";
+        return "Player One wins with " + currentPlay.PlayerOneInput + "!";
       }
-      else if (currentPlay.PlayerOneInput == "paper" && currentPlay.PlayerTwoInput == "rock")
+      else if ((currentPlay.PlayerTwoInput == "paper" && currentPlay.PlayerOneInput == "rock")
+      || (currentPlay.PlayerTwoInput == "rock" && currentPlay.PlayerOneInput == "scissors")
+      || (currentPlay.PlayerTwoInput == "scissors" && currentPlay.PlayerOneInput == "paper"))
       {
-        return "Player One wins with paper!";
-      }
-      else if (currentPlay.PlayerOneInput == "scissors" && currentPlay.PlayerTwoInput == "paper")
-      {
-        return "Player One wins with scissors!";
-      }
-      else if (currentPlay.PlayerTwoInput == "paper" && currentPlay.PlayerOneInput == "rock")
-      {
-        return "Player Two wins with paper!";
-      }
-      else if (currentPlay.PlayerTwoInput == "rock" && currentPlay.PlayerOneInput == "scissors")
-      {
-        return "Player Two wins with rock!";
-      }
-      else if (currentPlay.PlayerTwoInput == "scissors" && currentPlay.PlayerOneInput == "paper")
-      {
-        return "Player Two wins with scissors!";
+        return "Player Two wins with " + currentPlay.PlayerTwoInput + "!";
       }
       else return "Please enter paper, rock, or scissors.";
     }
