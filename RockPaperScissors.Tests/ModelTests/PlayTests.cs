@@ -118,7 +118,7 @@ namespace RockPaperScissors.Tests
     public void ExecutePlay_PlayerTwoWinsWithPaper_PaperWins()
     {
       // Arrange
-      Play newPlay = new Play("paper", "rock");
+      Play newPlay = new Play("rock", "paper");
 
       // Act
       string result = "Player Two wins with paper!";
