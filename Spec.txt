@@ -1,4 +1,4 @@
-Specs:
+Game rules for Rock, Paper, Scissors:
 
 * Write a method that can handle the different combinations of plays
 * The method should take two inputs, one for each player’s play
@@ -8,12 +8,15 @@ Specs:
 
 There are six possible inputs, 3 for each player
 
-Player One could throw a rock, paper, or scissors
-Player Two could throw a rock, paper, or scissors
-Three possible draw outcomes if both players throw a rock, paper, or scissors
-If either player throws a rock and the other throws scissors, rock will win (2 possible outcomes)
-If either player throws paper and the other throws rock, paper will win (2 possible outcomes)
-If either player throws scissors and the other throws paper, scissors will win (2 possible outcomes)
+* Player One could throw a rock, paper, or scissors (3 inputs)
+* Player Two could throw a rock, paper, or scissors (3 inputs)
+
+There are nine possible outcomes
+
+* Three possible draw outcomes if both players throw a rock, paper, or scissors
+* If either player throws a rock and the other throws scissors, rock will win (2 possible outcomes)
+* If either player throws paper and the other throws rock, paper will win (2 possible outcomes)
+* If either player throws scissors and the other throws paper, scissors will win (2 possible outcomes)
 
 Plain English specs
 * Method returns a draw when both players throw rock
