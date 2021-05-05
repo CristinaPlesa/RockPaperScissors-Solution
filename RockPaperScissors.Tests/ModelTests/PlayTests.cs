@@ -26,8 +26,8 @@ namespace RockPaperScissors.Tests
     Play newPlay = new Play(playerOneInput, playerTwoInput);
 
     // Assert
-    Assert.AreEqual(playerOneInput, newPlay.playerOneInput);
-    Assert.AreEqual(playerTwoInput, newPlay.playerTwoInput);
+    Assert.AreEqual(playerOneInput, newPlay.PlayerOneInput);
+    Assert.AreEqual(playerTwoInput, newPlay.PlayerTwoInput);
     }
 
     // [TestMethod]

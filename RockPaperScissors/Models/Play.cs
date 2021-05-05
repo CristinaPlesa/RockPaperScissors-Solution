@@ -7,11 +7,16 @@ namespace RockPaperScissors.Models
   {
     // properties, constructors, methods, etc. go here
     // public string GetResult { get; }
+    public string PlayerOneInput { get; }
+    
+    public string PlayerTwoInput { get; }
 
     public Play(string playerOneInput, string playerTwoInput)
     {
-      
+      PlayerOneInput = playerOneInput;
+      PlayerTwoInput = playerTwoInput;
     }
+
     // public void PlayRound(string input1, string input2)
     // {
 
