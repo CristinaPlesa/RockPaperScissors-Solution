@@ -11,16 +11,29 @@ namespace RockPaperScissors.Tests
     [TestMethod]
     public void PlayConstructor_CreatesInstanceOfPlay_Play()
     {
-      Play newPlay = new Play();
+      Play newPlay = new Play("test", "test");
       Assert.AreEqual(typeof(Play), newPlay.GetType());
+    }
+
+    [TestMethod]
+    public void PlayConstructor_ReturnOfPlay_Play()
+    {
+    //Arrange
+    string playerOneInput = "rock";
+    string playerTwoInput = "rock";
+    
+    // Act
+    Play newPlay = new Play(playerOneInput, playerTwoInput);
+
+    // Assert
+    Assert.AreEqual(playerOneInput, newPlay.playerOneInput);
+    Assert.AreEqual(playerTwoInput, newPlay.playerTwoInput);
     }
 
     // [TestMethod]
     // public void PlayRound_PlayARoundOfRPS_Draw()
     // {
     // // Arrange
-    // string playerOneInput = "rock";
-    // string playerTwoInput = "rock";
     // string result = "draw";
 
     // // Act
@@ -31,20 +44,6 @@ namespace RockPaperScissors.Tests
     // }
   }
 }
-
-  // [TestMethod]
-  //   public void SetDescription_SetDescription_String()
-  //   {
-  //     //Arrange
-  //     string description = "Walk the dog.";
-  //     Item newItem = new Item(description);
-  //     //Act
-  //     string updatedDescription = "Do the dishes";
-  //     newItem.Description = updatedDescription;
-  //     string result = newItem.Description;
-  //     //Assert
-  //     Assert.AreEqual(updatedDescription, result);
-  //   }
 
 
 // Test template
