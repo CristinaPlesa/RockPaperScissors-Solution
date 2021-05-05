@@ -1,16 +1,51 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
-using ProjectName;
+using RockPaperScissors.Models;
 
-namespace ProjectName.Tests
+namespace RockPaperScissors.Tests
 {
   [TestClass]
-  public class ClassNameTests
+  public class PlayTests
   {
-    // Test methods go here
+    [TestMethod]
+    public void PlayConstructor_CreatesInstanceOfPlay_Play()
+    {
+      Play newPlay = new Play();
+      Assert.AreEqual(typeof(Play), newPlay.GetType());
+    }
+
+    // [TestMethod]
+    // public void PlayRound_PlayARoundOfRPS_Draw()
+    // {
+    // // Arrange
+    // string playerOneInput = "rock";
+    // string playerTwoInput = "rock";
+    // string result = "draw";
+
+    // // Act
+    // string output = Play.PlayRound(playerOneInput, playerTwoInput);
+
+    // // Assert
+    // Assert.AreEqual(result, output);
+    // }
   }
 }
+
+  // [TestMethod]
+  //   public void SetDescription_SetDescription_String()
+  //   {
+  //     //Arrange
+  //     string description = "Walk the dog.";
+  //     Item newItem = new Item(description);
+  //     //Act
+  //     string updatedDescription = "Do the dishes";
+  //     newItem.Description = updatedDescription;
+  //     string result = newItem.Description;
+  //     //Assert
+  //     Assert.AreEqual(updatedDescription, result);
+  //   }
+
 
 // Test template
 // [TestMethod]
