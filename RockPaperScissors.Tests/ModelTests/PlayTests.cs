@@ -73,13 +73,13 @@ namespace RockPaperScissors.Tests
     }
 
     [TestMethod]
-    public void ExecutePlay_PlayARoundOfRPSWithP1RockWin_Win()
+    public void ExecutePlay_PlayerOneWinsWithRock_RockWins()
     {
       //Arrange
       Play newPlay = new Play("rock", "scissors");
 
       //Act
-      string result = "win";
+      string result = "Player One wins with rock!";
       string output = Play.ExecutePlay(newPlay);
 
       //Assert

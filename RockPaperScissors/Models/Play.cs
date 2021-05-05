@@ -25,7 +25,7 @@ namespace RockPaperScissors.Models
       }
       else if (currentPlay.PlayerOneInput == "rock" && currentPlay.PlayerTwoInput == "scissors")
       {
-        return "win";
+        return "Player One wins with rock!";
       }
       else return "not a draw";
     }
