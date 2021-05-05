@@ -17,9 +17,13 @@ namespace RockPaperScissors.Models
       PlayerTwoInput = playerTwoInput;
     }
 
-    public static string ExecutePlay()
+    public static string ExecutePlay(Play currentPlay)
     {
-      
+      if (currentPlay.PlayerOneInput == currentPlay.PlayerTwoInput)
+      {
+        return "draw";
+      }
+      else return "not a draw";
     }
 
 

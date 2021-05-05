@@ -31,14 +31,42 @@ namespace RockPaperScissors.Tests
     }
 
     [TestMethod]
-    public void PlayRound_PlayARoundOfRPS_Draw()
+    public void ExecutePlay_PlayARoundOfRPSWithRocks_Draw()
     {
     // Arrange
     Play newPlay = new Play("rock", "rock");
 
     // Act
     string result = "draw";
-    string output = newPlay.ExecutePlay();
+    string output = Play.ExecutePlay(newPlay);
+
+    // Assert
+    Assert.AreEqual(result, output);
+    }
+
+    [TestMethod]
+    public void ExecutePlay_PlayARoundOfRPSWithPaper_Draw()
+    {
+    // Arrange
+    Play newPlay = new Play("paper", "paper");
+
+    // Act
+    string result = "draw";
+    string output = Play.ExecutePlay(newPlay);
+
+    // Assert
+    Assert.AreEqual(result, output);
+    }
+
+    [TestMethod]
+    public void ExecutePlay_PlayARoundOfRPSWithScissors_Draw()
+    {
+    // Arrange
+    Play newPlay = new Play("scissors", "scissors");
+
+    // Act
+    string result = "draw";
+    string output = Play.ExecutePlay(newPlay);
 
     // Assert
     Assert.AreEqual(result, output);
