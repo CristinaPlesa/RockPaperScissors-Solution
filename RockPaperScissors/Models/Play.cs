@@ -17,10 +17,12 @@ namespace RockPaperScissors.Models
       PlayerTwoInput = playerTwoInput;
     }
 
-    // public void PlayRound(string input1, string input2)
-    // {
+    public static string ExecutePlay()
+    {
+      
+    }
 
-    // }
+
   }
 }
 

@@ -30,20 +30,35 @@ namespace RockPaperScissors.Tests
     Assert.AreEqual(playerTwoInput, newPlay.PlayerTwoInput);
     }
 
-    // [TestMethod]
-    // public void PlayRound_PlayARoundOfRPS_Draw()
-    // {
-    // // Arrange
-    // string result = "draw";
+    [TestMethod]
+    public void PlayRound_PlayARoundOfRPS_Draw()
+    {
+    // Arrange
+    Play newPlay = new Play("rock", "rock");
 
-    // // Act
-    // string output = Play.PlayRound(playerOneInput, playerTwoInput);
+    // Act
+    string result = "draw";
+    string output = newPlay.ExecutePlay();
 
-    // // Assert
-    // Assert.AreEqual(result, output);
-    // }
+    // Assert
+    Assert.AreEqual(result, output);
+    }
   }
 }
+
+
+    // public void SetDescription_SetDescription_String()
+    // {
+    //   //Arrange
+    //   string description = "Walk the dog.";
+    //   Item newItem = new Item(description);
+    //   //Act
+    //   string updatedDescription = "Do the dishes";
+    //   newItem.Description = updatedDescription;
+    //   string result = newItem.Description;
+    //   //Assert
+    //   Assert.AreEqual(updatedDescription, result);
+    // }
 
 
 // Test template
