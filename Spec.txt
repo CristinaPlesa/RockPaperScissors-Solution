@@ -1,0 +1,42 @@
+Specs:
+
+* Write a method that can handle the different combinations of plays
+* The method should take two inputs, one for each player’s play
+* It should return the victor if there is a victor and a draw if nobody wins
+* Each play can consist of a rock, paper, or scissors
+* Victory is determined when a rock beats scissors, paper covers rock, or scissors cut paper
+
+There are six possible inputs, 3 for each player
+
+Player One could throw a rock, paper, or scissors
+Player Two could throw a rock, paper, or scissors
+Three possible draw outcomes if both players throw a rock, paper, or scissors
+If either player throws a rock and the other throws scissors, rock will win (2 possible outcomes)
+If either player throws paper and the other throws rock, paper will win (2 possible outcomes)
+If either player throws scissors and the other throws paper, scissors will win (2 possible outcomes)
+
+Plain English specs
+* Method returns a draw when both players throw rock
+* Method returns a draw when both players throw paper
+* Method returns a draw when both players throw scissors
+* Player One wins when Player One throws rock and Player Two throws scissors
+* Player One wins when Player One throws paper and Player Two throws rock
+* Player One wins when Player One throws scissors and Player Two throws paper
+* Player Two wins when Player Two throws paper and Player One throws rock
+* Player Two wins when Player Two throws rock and Player One throws scissors
+* Player Two wins when Player Two throws scissors and Player One throws paper
+
+Arrange: declare all necessary components, (description and declared variables)
+Act: invoke functionality we're testing (code:)
+Assert: similar to (expected:) comparing actual output with the anicipated output
+
+Test 1: play results in a draw
+// Arrange
+two input variables, one for each player's play (which in this case will be the same)
+another output variable "result" equal to the expected result of the method
+
+// Act
+invoke the method passing the input as arguments
+
+// Assert
+draw a comparison that expects the variable "result" to equal the output of the method
