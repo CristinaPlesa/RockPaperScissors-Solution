@@ -71,9 +71,25 @@ namespace RockPaperScissors.Tests
     // Assert
     Assert.AreEqual(result, output);
     }
+
+    [TestMethod]
+    public void ExecutePlay_PlayARoundOfRPSWithP1RockWin_Win()
+    {
+      //Arrange
+      Play newPlay = new Play("rock", "scissors");
+
+      //Act
+      string result = "win";
+      string output = Play.ExecutePlay(newPlay);
+
+      //Assert
+      Assert.AreEqual(result, output);
+    }
+
   }
 }
 
+//* Player One wins when Player One throws rock and Player Two throws scissors
 
     // public void SetDescription_SetDescription_String()
     // {
