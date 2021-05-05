@@ -141,6 +141,20 @@ namespace RockPaperScissors.Tests
       // Assert
       Assert.AreEqual(result, output);
     }
+
+    [TestMethod]
+    public void ExecutePlay_PlayerTwoWinsWithScissors_ScissorsWin()
+    {
+      // Arrange
+      Play newPlay = new Play("paper", "scissors");
+
+      // Act
+      string result = "Player Two wins with scissors!";
+      string output = Play.ExecutePlay(newPlay);
+
+      // Assert
+      Assert.AreEqual(result, output);
+    }
   }
 }
 
